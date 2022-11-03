@@ -1,0 +1,68 @@
+﻿@page "/Guest/Edit/{Id:int}"
+@using HotelManagement.Shared
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JsRuntime
+<h2>Edit Person</h2>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="FirstName"> First Name *</label>
+            <input form="FirstName" class="form-control" @bind="@guest.FirstName" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="LastName"> Last Name *</label>
+            <input form="LastName" class="form-control" @bind="@guest.LastName" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="BirthDate"> Birth Date *</label>
+            <input form="BirthDate" class="form-control" @bind="@guest.BirthDate" />
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="Mobile"> Mobile *</label>
+            <input form="Mobile" class="form-control" @bind="@guest.Mobile" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="Address"> Address *</label>
+            <input form="Address" class="form-control" @bind="@guest.Address" />
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" @onclick="@Save" value="Save" />
+            <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
+        </div>
+    </div>
+</div>
+
+@code { [Parameter]
+            public int Id { get; set; }
+            Guest guest = new Guest();
+            protected override async Task OnInitializedAsync()
+            {
+                guest = await Http.GetFromJsonAsync<Guest>("api/guest/" + Id);
+            }
+            protected async Task Save()
+            {
+                var response = await Http.PutAsJsonAsync("api/guest/" + Id, guest);
+                
+                    await JsRuntime.InvokeVoidAsync("alert", "Updated Successfully!");
+                    NavigationManager.NavigateTo("/Guest");
+                
+            }
+            void Cancel()
+            {
+                NavigationManager.NavigateTo("/Guest");
+            } }

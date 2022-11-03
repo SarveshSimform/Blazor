@@ -1,0 +1,63 @@
+﻿@page "/Guest/create"
+
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JsRuntime
+
+
+<h1>Create</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="Name" class="control-label">First Name</label>
+                <input for="Name" class="form-control" @bind="@guest.FirstName" />
+            </div>
+            <div class="form-group">
+                <label asp-for="JoiningDate" class="control-label">Last Name</label>
+                <input asp-for="JoiningDate" class="form-control" @bind="@guest.LastName" />
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthDate" class="control-label">BirthDate</label>
+                <input asp-for="BirthDate" class="form-control" @bind="@guest.BirthDate" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Mobile" class="control-label">Mobile</label>
+                <input asp-for="Mobile" class="form-control" @bind="@guest.Mobile" />
+            </div>
+            <div class="form-group">
+                <label asp-for="GuardianName" class="control-label">Address</label>
+                <input asp-for="GuardianName" class="form-control" @bind="@guest.Address" />
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="button" class="btn btn-primary" @onclick="@Save" value="Save" />
+                        <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@code {
+    Guest guest = new Guest();
+    protected override async Task OnInitializedAsync()
+    {
+    }
+    protected async Task Save()
+    {
+        var response = await Http.PostAsJsonAsync("api/guest", guest);
+        await JsRuntime.InvokeVoidAsync("alert", "Saved Successfully!");
+        NavigationManager.NavigateTo("/Guest");
+
+    }
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("/Guest");
+    }
+}

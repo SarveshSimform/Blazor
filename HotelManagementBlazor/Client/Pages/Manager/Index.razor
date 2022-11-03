@@ -1,0 +1,63 @@
+﻿@page "/manager"
+@inject HttpClient Http
+@attribute [Authorize(Roles = "Manager")]
+@inject HttpClient httpClient
+@using HotelManagement.Client.Authentication
+@inject AuthenticationStateProvider authStateProvider
+@inject NavigationManager navManager
+@using System.Net.Http.Headers
+
+<h1>Manager Data</h1>
+
+<p>
+    <a href="/manager/Create">Create</a>
+</p>
+
+@if (manList == null)
+{
+<p><em>Loading...</em></p> }
+            else
+            {
+<table class='table'>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var man in manList)
+        {
+<tr>
+    <td>@man.Id</td>
+    <td>@man.Name</td>
+    <td>@man.Email</td>
+    <td>@man.Department</td>
+    <td>
+        <a href='/manager/edit/@man.Id'>Edit</a>  |
+        <a href='/manager/delete/@man.Id'>Delete</a>
+    </td>
+</tr>}
+    </tbody>
+</table>}
+
+@code { IEnumerable<Manager> manList;
+
+            protected override async Task OnInitializedAsync()
+            {
+                var customStateProvider = (CustomAuthenticationstateProvider)authStateProvider;
+                var token = await customStateProvider.GetToken();
+                if (!string.IsNullOrWhiteSpace(token))
+                {
+                    Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token);
+                    manList = await Http.GetFromJsonAsync<IEnumerable<Manager>>("/api/manager/").ConfigureAwait(false);
+                }
+                else
+                {
+                    navManager.NavigateTo("/login");
+                }
+
+                // manList = await Http.GetFromJsonAsync<IEnumerable<Manager>>("/api/manager/").ConfigureAwait(false);
+            } }

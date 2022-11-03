@@ -1,0 +1,271 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Server\\HospitalSystem.Server.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Client\\HotelManagement.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Client\\HotelManagement.Client.csproj",
+        "projectName": "HotelManagement.Client",
+        "projectPath": "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Client\\HotelManagement.Client.csproj",
+        "packagesPath": "C:\\Users\\sarvesh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sarvesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\GCM\\Local Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Shared\\HospitalSystem.Shared.csproj": {
+                "projectPath": "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Shared\\HospitalSystem.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Blazored.SessionStorage": {
+              "target": "Package",
+              "version": "[1.0.9, )"
+            },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[3.1.27, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Build": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Server\\HospitalSystem.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Server\\HospitalSystem.Server.csproj",
+        "projectName": "HospitalSystem.Server",
+        "projectPath": "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Server\\HospitalSystem.Server.csproj",
+        "packagesPath": "C:\\Users\\sarvesh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sarvesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\GCM\\Local Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Client\\HotelManagement.Client.csproj": {
+                "projectPath": "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Client\\HotelManagement.Client.csproj"
+              },
+              "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Shared\\HospitalSystem.Shared.csproj": {
+                "projectPath": "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Shared\\HospitalSystem.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.27, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.23.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.22, 3.1.22]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Shared\\HospitalSystem.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Shared\\HospitalSystem.Shared.csproj",
+        "projectName": "HospitalSystem.Shared",
+        "projectPath": "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Shared\\HospitalSystem.Shared.csproj",
+        "packagesPath": "C:\\Users\\sarvesh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sarvesh\\Downloads\\Blazor-CRUD-Hospital-system--main\\Blazor-CRUD-Hospital-system--main\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sarvesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\GCM\\Local Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

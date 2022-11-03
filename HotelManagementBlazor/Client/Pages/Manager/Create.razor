@@ -1,0 +1,54 @@
+﻿@page "/manager/create"
+
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JsRuntime
+
+
+<h1>Create</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="Name" class="control-label">Name</label>
+                <input for="Name" class="form-control" @bind="@man.Name" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">Email</label>
+                <input asp-for="Email" class="form-control" @bind="@man.Email" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label">Department</label>
+                <input asp-for="Location" class="form-control" @bind="@man.Department" />
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="button" class="btn btn-primary" @onclick="@Save" value="Save" />
+                        <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+,
+@code { Manager man = new Manager();
+            protected override async Task OnInitializedAsync()
+            {
+            }
+            protected async Task Save()
+            {
+                var response = await Http.PostAsJsonAsync("api/manager", @man);
+                
+               
+                    await JsRuntime.InvokeVoidAsync("alert", "Saved Successfully!");
+                    NavigationManager.NavigateTo("/manager");
+               
+            }
+            void Cancel()
+            {
+                NavigationManager.NavigateTo("/manager");
+            } }

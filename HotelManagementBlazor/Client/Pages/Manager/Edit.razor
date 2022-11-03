@@ -1,0 +1,47 @@
+﻿@page "/manager/Edit/{Id:int}"
+@using HotelManagement.Shared
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JsRuntime
+<h2>Edit Person</h2>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="FirstName"> Name *</label>
+            <input form="FirstName" class="form-control" @bind="@man.Name" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="Email"> Email *</label>
+            <input form="Email" class="form-control" @bind="@man.Email" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" @onclick="@Save" value="Save" />
+            <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
+        </div>
+    </div>
+</div>
+@code { [Parameter]
+            public int Id { get; set; }
+            Manager man = new Manager();
+            protected override async Task OnInitializedAsync()
+            {
+                man = await Http.GetFromJsonAsync<Manager>("api/manager/" + Id);
+            }
+            protected async Task Save()
+            {
+                var response = await Http.PutAsJsonAsync("api/manager/" + Id, @man);
+                
+                    await JsRuntime.InvokeVoidAsync("alert", "Updated Successfully!");
+                    NavigationManager.NavigateTo("/manager");
+                       
+            }
+            void Cancel()
+            {
+                NavigationManager.NavigateTo("/manager");
+            } }

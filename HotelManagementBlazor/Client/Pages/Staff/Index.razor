@@ -1,0 +1,81 @@
+﻿@page "/Staff"
+@inject HttpClient Http
+@attribute [Authorize(Roles = "Manager, Staff")]
+@inject HttpClient httpClient
+@using HotelManagement.Client.Authentication
+@inject AuthenticationStateProvider authStateProvider
+@inject NavigationManager navManager
+@using System.Net.Http.Headers
+
+
+
+<h1>Staff Data</h1>
+
+
+
+<p>
+    <a href="/Staff/Create">Create</a>
+</p>
+
+
+
+@if (staffList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Joining Date</th>
+                <th>Birth Date</th>
+                <th>Shift Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var staff in staffList)
+            {
+                <tr>
+                    <td>@staff.Id</td>
+                    <td>@staff.Name</td>
+                    <td>@staff.JoiningDate</td>
+                    <td>@staff.BirthDate</td>
+                    <td>@staff.ShiftTime</td>
+                    <td>
+                        <a href='/Staff/Edit/@staff.Id'>Edit</a>  |
+                        <a href='/Staff/Delete/@staff.Id'>Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+
+@code {
+    Staff[] staffList;
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+
+
+        var customStateProvider = (CustomAuthenticationstateProvider)authStateProvider;
+        var token = await customStateProvider.GetToken();
+        if (!string.IsNullOrWhiteSpace(token))
+        {
+            Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token);
+            staffList = await Http.GetFromJsonAsync<Staff[]>("/api/staff/");
+        }
+        else
+        {
+            navManager.NavigateTo("/login");
+        }
+    }
+}

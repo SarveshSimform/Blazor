@@ -1,0 +1,64 @@
+﻿@page "/Guest"
+@inject HttpClient Http
+
+
+
+<h1>Guests Data</h1>
+
+
+
+<p>
+    <a href="/Guest/Create">Create</a>
+</p>
+
+
+
+@if (guestList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Birth Date</th>
+                <th>Mobile</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var guest in guestList)
+            {
+                <tr>
+                    <td>@guest.Id</td>
+                    <td>@guest.FirstName</td>
+                    <td>@guest.LastName</td>
+                    <td>@guest.BirthDate</td>
+                    <th>@guest.Mobile</th>
+                    <td>@guest.Address</td>
+                    <td>
+                        <a href='/Guest/Edit/@guest.Id' >Edit</a>  |
+                        <a href='/Guest/Delete/@guest.Id'>Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+
+@code {
+    Guest[] guestList;
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        guestList = await Http.GetFromJsonAsync<Guest[]>("/api/guest/");
+    }
+}
