@@ -1,13 +1,7 @@
 ﻿using HotelManagement.Server.Models;
 using HotelManagement.Server.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-
-
 
 namespace HotelManagement.Server.Controllers
 {
@@ -28,8 +22,6 @@ namespace HotelManagement.Server.Controllers
             return Ok(await _guestRepository.GetAllGuests());
         }
 
-
-
         [HttpPost]
         public void Create([FromBody] Guest guest)
         {
@@ -38,15 +30,11 @@ namespace HotelManagement.Server.Controllers
 
         }
 
-
-
         [HttpGet("{id}")]
         public Guest Details(int id)
         {
             return _guestRepository.GetGuestById(id);
         }
-
-
 
         [HttpPut]
         public void Edit([FromBody] Guest guest)
@@ -54,8 +42,6 @@ namespace HotelManagement.Server.Controllers
             if (ModelState.IsValid)
                 this._guestRepository.UpdateGuest(guest);
         }
-
-
 
         [HttpDelete("{id}")]
         public void Delete(int id)

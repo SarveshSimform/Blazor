@@ -1,0 +1,25 @@
+﻿@using HotelManagement.Server.Repositories;
+<h3>GenerateGuestReport</h3>
+
+@inject ReportService reportService
+
+<h1>Generate Guest Report</h1>
+
+@if (ReportData is null)
+{
+    <p><em>No report generated yet.</em></p>
+}
+else
+{
+    <h2>Report</h2>
+    <p>Download the generated report: <a href="data:text/csv;base64,@Convert.ToBase64String(ReportData)" download="InwardReport.csv">Download</a></p>
+}
+
+@code {
+    byte[] ReportData;
+
+    private async Task GenerateReport()
+    {
+        ReportData = await reportService.GenerateGuestReportAsync();
+    }
+}

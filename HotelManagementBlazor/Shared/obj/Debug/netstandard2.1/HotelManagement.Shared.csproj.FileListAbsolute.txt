@@ -17,3 +17,13 @@ C:\Users\sarvesh\Documents\HotelManagementBlazor\Shared\obj\Debug\netstandard2.1
 C:\Users\sarvesh\Documents\HotelManagementBlazor\Shared\obj\Debug\netstandard2.1\HotelManagement.Shared.csproj.CoreCompileInputs.cache
 C:\Users\sarvesh\Documents\HotelManagementBlazor\Shared\obj\Debug\netstandard2.1\HotelManagement.Shared.dll
 C:\Users\sarvesh\Documents\HotelManagementBlazor\Shared\obj\Debug\netstandard2.1\HotelManagement.Shared.pdb
+C:\Users\sarvesh\Documents\Blazor\HotelManagementBlazor\Shared\bin\Debug\netstandard2.1\HotelManagement.Shared.deps.json
+C:\Users\sarvesh\Documents\Blazor\HotelManagementBlazor\Shared\bin\Debug\netstandard2.1\HotelManagement.Shared.dll
+C:\Users\sarvesh\Documents\Blazor\HotelManagementBlazor\Shared\bin\Debug\netstandard2.1\HotelManagement.Shared.pdb
+C:\Users\sarvesh\Documents\Blazor\HotelManagementBlazor\Shared\obj\Debug\netstandard2.1\HotelManagement.Shared.csproj.AssemblyReference.cache
+C:\Users\sarvesh\Documents\Blazor\HotelManagementBlazor\Shared\obj\Debug\netstandard2.1\HotelManagement.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sarvesh\Documents\Blazor\HotelManagementBlazor\Shared\obj\Debug\netstandard2.1\HotelManagement.Shared.AssemblyInfoInputs.cache
+C:\Users\sarvesh\Documents\Blazor\HotelManagementBlazor\Shared\obj\Debug\netstandard2.1\HotelManagement.Shared.AssemblyInfo.cs
+C:\Users\sarvesh\Documents\Blazor\HotelManagementBlazor\Shared\obj\Debug\netstandard2.1\HotelManagement.Shared.csproj.CoreCompileInputs.cache
+C:\Users\sarvesh\Documents\Blazor\HotelManagementBlazor\Shared\obj\Debug\netstandard2.1\HotelManagement.Shared.dll
+C:\Users\sarvesh\Documents\Blazor\HotelManagementBlazor\Shared\obj\Debug\netstandard2.1\HotelManagement.Shared.pdb

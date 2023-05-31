@@ -1,9 +1,9 @@
 ﻿using HotelManagement.Server.Data;
 using HotelManagement.Server.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace HotelManagement.Server.Repositories
@@ -11,9 +11,11 @@ namespace HotelManagement.Server.Repositories
     public class GuestAccessLayer : IGuestRepository
     {
         private AppDbContext _context;
-        public GuestAccessLayer(AppDbContext context)
+        private readonly ILogger<GuestAccessLayer> _logger;
+        public GuestAccessLayer(AppDbContext context, ILogger<GuestAccessLayer> logger)
         {
             _context = context;
+            _logger = logger;
         }
         public void AddGuest(Guest guest)
         {
@@ -22,9 +24,10 @@ namespace HotelManagement.Server.Repositories
                 _context.Guest.Add(guest);
                 _context.SaveChanges();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                throw ex;
+                _logger.LogError(ex, "Error while inserting data.");
+                throw;
             }
         }
 
@@ -38,7 +41,8 @@ namespace HotelManagement.Server.Repositories
             }
             catch (Exception ex)
             {
-                throw ex;
+                _logger.LogError(ex, "Error while deleting data.");
+                throw;
             }
         }
 
@@ -50,7 +54,8 @@ namespace HotelManagement.Server.Repositories
             }
             catch (Exception ex)
             {
-                throw ex;
+                _logger.LogError(ex, "Error while fetching all data.");
+                throw;
             }
         }
 
@@ -64,7 +69,8 @@ namespace HotelManagement.Server.Repositories
             }
             catch (Exception ex)
             {
-                throw ex;
+                _logger.LogError(ex, "Error while fetching selected data");
+                throw;
             }
         }
 
@@ -77,7 +83,8 @@ namespace HotelManagement.Server.Repositories
             }
             catch (Exception ex)
             {
-                throw ex;
+                _logger.LogError(ex, "Error while updating data.");
+                throw;
             }
         }
     }

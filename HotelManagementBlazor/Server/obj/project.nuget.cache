@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S13EqqDszMsLn3Nx1ZjnZuq2rsYb5/aGMym7JpFiWRBiloNusZWOniMBgNKsqRKN6XkYrQPFEgYajImQIA6zWg==",
+  "dgSpecHash": "Hzp0C651J94qGZRgrETm6h0ACE3Aig7hTgdj5jAn7mv45nKBNtUSe0KylXLWeC/F2c49FPMc0oHOidkLvB7hCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sarvesh\\Documents\\HotelManagementBlazor\\Server\\HotelManagement.Server.csproj",
+  "projectFilePath": "C:\\Users\\sarvesh\\Documents\\Blazor\\HotelManagementBlazor\\Server\\HotelManagement.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sarvesh\\.nuget\\packages\\blazored.sessionstorage\\1.0.9\\blazored.sessionstorage.1.0.9.nupkg.sha512",
     "C:\\Users\\sarvesh\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.1\\microsoft.aspnetcore.authentication.jwtbearer.3.1.1.nupkg.sha512",
@@ -126,8 +126,7 @@
     "C:\\Users\\sarvesh\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\sarvesh\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\sarvesh\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\sarvesh\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\sarvesh\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+    "C:\\Users\\sarvesh\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
